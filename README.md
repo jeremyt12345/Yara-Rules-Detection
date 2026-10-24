@@ -52,6 +52,15 @@ rule shell_sandbox_evasion
         
         $runkey  = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii wide nocase
 
+Added the rule to a notepad and then fired to see the detection
+
+<img width="1912" height="914" alt="image" src="https://github.com/user-attachments/assets/99319844-435d-4184-b0e8-2a0adff951ed" />
+
+
+
+<img width="1912" height="914" alt="image" src="https://github.com/user-attachments/assets/3bc52b2f-672e-4d1e-b106-0e7da8c494ca" />
+
+
         
 
     condition:
