@@ -24,6 +24,9 @@ Rule Logic for what would be added to Yara Rule Detection( AI Assisted)
 <img width="954" height="523" alt="image" src="https://github.com/user-attachments/assets/ce05d53c-23f6-4335-9e33-049ccee3ffbb" />
 
 
+
+
+
 rule shell_sandbox_evasion
 {
     meta:
@@ -31,6 +34,9 @@ rule shell_sandbox_evasion
         description = "Detects shell.exe sample using VMware sandbox evasion, fake update User-Agent, and lookalike download domain"
         date        = "2026-10-23"
         sha256      = "bd841e796feed0088ae670284ab991f212cf709f2391310a85443b2ed1312bda"
+
+
+
 
     strings:
         $sandbox = "Sandbox detected" ascii wide
