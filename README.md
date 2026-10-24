@@ -35,6 +35,8 @@ rule shell_sandbox_evasion
         date        = "2026-10-23"
         sha256      = "bd841e796feed0088ae670284ab991f212cf709f2391310a85443b2ed1312bda"
 
+        
+
 
 
 
@@ -52,6 +54,12 @@ rule shell_sandbox_evasion
         
         $runkey  = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii wide nocase
 
+        
+    condition:
+        $sandbox and 3 of ($vmware, $ua, $domain, $ping, $runkey)
+}
+
+
 Added the rule to a notepad and then fired to see the detection
 
 <img width="1912" height="914" alt="image" src="https://github.com/user-attachments/assets/99319844-435d-4184-b0e8-2a0adff951ed" />
@@ -63,9 +71,6 @@ Added the rule to a notepad and then fired to see the detection
 
         
 
-    condition:
-        $sandbox and 3 of ($vmware, $ua, $domain, $ping, $runkey)
-}
 
 
 
