@@ -39,12 +39,20 @@ rule shell_sandbox_evasion
 
 
     strings:
+    
         $sandbox = "Sandbox detected" ascii wide
+        
         $vmware  = "SOFTWARE\\VMware, Inc.\\VMware Tools" ascii wide nocase
+        
         $ua      = "Windows-Update/7.6.7600.256" ascii wide
+        
         $domain  = "ms-windows-update.com" ascii wide nocase
+        
         $ping    = "/k ping 127.0.0.1 -n 5" ascii wide
+        
         $runkey  = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii wide nocase
+
+        
 
     condition:
         $sandbox and 3 of ($vmware, $ua, $domain, $ping, $runkey)
